@@ -1,0 +1,1 @@
+savedcmd_/home/user/work/proc_demo1/procdemo.mod := printf '%s\n'   proc_main.o proc_or.o proc_read.o proc_write.o | awk '!x[$$0]++ { print("/home/user/work/proc_demo1/"$$0) }' > /home/user/work/proc_demo1/procdemo.mod

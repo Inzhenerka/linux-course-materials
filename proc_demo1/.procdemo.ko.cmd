@@ -1,0 +1,1 @@
+savedcmd_/home/user/work/proc_demo1/procdemo.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/user/work/proc_demo1/procdemo.ko /home/user/work/proc_demo1/procdemo.o /home/user/work/proc_demo1/procdemo.mod.o

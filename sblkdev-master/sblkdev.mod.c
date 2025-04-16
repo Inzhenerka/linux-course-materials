@@ -1,0 +1,119 @@
+#include <linux/module.h>
+#define INCLUDE_VERMAGIC
+#include <linux/build-salt.h>
+#include <linux/elfnote-lto.h>
+#include <linux/export-internal.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+#ifdef CONFIG_UNWINDER_ORC
+#include <asm/orc_header.h>
+ORC_HEADER;
+#endif
+
+BUILD_SALT;
+BUILD_LTO_INFO;
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__section(".gnu.linkonce.this_module") = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+#ifdef CONFIG_RETPOLINE
+MODULE_INFO(retpoline, "Y");
+#endif
+
+
+
+static const char ____versions[]
+__used __section("__versions") =
+	"\x1c\x00\x00\x00\x26\xe3\x02\xd0"
+	"__blk_alloc_disk\0\0\0\0"
+	"\x28\x00\x00\x00\xe4\x2f\xd7\x40"
+	"blk_queue_logical_block_size\0\0\0\0"
+	"\x18\x00\x00\x00\xaa\xdc\x62\x56"
+	"device_add_disk\0"
+	"\x10\x00\x00\x00\x38\xdf\xac\x69"
+	"memcpy\0\0"
+	"\x10\x00\x00\x00\xba\x0c\x7a\x03"
+	"kfree\0\0\0"
+	"\x14\x00\x00\x00\x2c\x01\x04\xae"
+	"__vmalloc\0\0\0"
+	"\x18\x00\x00\x00\x8c\x89\xd4\xcb"
+	"fortify_panic\0\0\0"
+	"\x24\x00\x00\x00\x38\x45\xee\x41"
+	"bio_end_io_acct_remapped\0\0\0\0"
+	"\x14\x00\x00\x00\xbb\x6d\xfb\xbd"
+	"__fentry__\0\0"
+	"\x10\x00\x00\x00\x7e\x3a\x2c\x12"
+	"_printk\0"
+	"\x14\x00\x00\x00\x82\x9a\x17\xe3"
+	"put_disk\0\0\0\0"
+	"\x1c\x00\x00\x00\xcb\xf6\xfd\xf0"
+	"__stack_chk_fail\0\0\0\0"
+	"\x28\x00\x00\x00\x5f\xec\x92\x7c"
+	"blk_queue_physical_block_size\0\0\0"
+	"\x1c\x00\x00\x00\xbf\xb6\x65\xba"
+	"blk_queue_flag_set\0\0"
+	"\x1c\x00\x00\x00\x1c\xdd\xca\xb3"
+	"bio_start_io_acct\0\0\0"
+	"\x1c\x00\x00\x00\x5e\xd7\xd8\x7c"
+	"page_offset_base\0\0\0\0"
+	"\x1c\x00\x00\x00\xdc\x59\xa4\xb5"
+	"unregister_blkdev\0\0\0"
+	"\x14\x00\x00\x00\x30\x97\x31\x39"
+	"bio_endio\0\0\0"
+	"\x18\x00\x00\x00\x7d\x59\x76\x03"
+	"set_capacity\0\0\0\0"
+	"\x1c\x00\x00\x00\x63\xa5\x03\x4c"
+	"random_kmalloc_seed\0"
+	"\x14\x00\x00\x00\x4c\x49\xec\xab"
+	"del_gendisk\0"
+	"\x14\x00\x00\x00\x87\x73\x3c\x5c"
+	"kstrtoull\0\0\0"
+	"\x18\x00\x00\x00\xad\xb1\xda\xe5"
+	"param_ops_charp\0"
+	"\x1c\x00\x00\x00\xca\x39\x82\x5b"
+	"__x86_return_thunk\0\0"
+	"\x18\x00\x00\x00\xe1\xbe\x10\x6b"
+	"_copy_to_user\0\0\0"
+	"\x10\x00\x00\x00\xfd\xf9\x3f\x3c"
+	"sprintf\0"
+	"\x18\x00\x00\x00\x6c\x1e\x65\x97"
+	"vmemmap_base\0\0\0\0"
+	"\x10\x00\x00\x00\x97\x82\x9e\x99"
+	"vfree\0\0\0"
+	"\x10\x00\x00\x00\x6c\x9b\xdf\x85"
+	"strsep\0\0"
+	"\x1c\x00\x00\x00\xa7\x27\x0a\x72"
+	"__register_blkdev\0\0\0"
+	"\x1c\x00\x00\x00\x65\x62\xf5\x2c"
+	"__dynamic_pr_debug\0\0"
+	"\x18\x00\x00\x00\x19\x4e\x00\x34"
+	"kmalloc_trace\0\0\0"
+	"\x24\x00\x00\x00\xc3\x19\x9c\xf8"
+	"blk_queue_max_hw_sectors\0\0\0\0"
+	"\x10\x00\x00\x00\x9c\x53\x4d\x75"
+	"strlen\0\0"
+	"\x14\x00\x00\x00\x45\x3a\x23\xeb"
+	"__kmalloc\0\0\0"
+	"\x20\x00\x00\x00\x5d\x7b\xc1\xe2"
+	"__SCT__might_resched\0\0\0\0"
+	"\x18\x00\x00\x00\x52\x57\xa3\x91"
+	"kmalloc_caches\0\0"
+	"\x18\x00\x00\x00\x3a\x0a\xd8\xfc"
+	"module_layout\0\0\0"
+	"\x00\x00\x00\x00\x00\x00\x00\x00";
+
+MODULE_INFO(depends, "");
+
+
+MODULE_INFO(srcversion, "E33C7664C60831FB80EE06B");

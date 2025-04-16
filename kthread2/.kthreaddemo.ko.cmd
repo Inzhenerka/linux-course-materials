@@ -1,0 +1,1 @@
+savedcmd_/home/user/work/kthread2/kthreaddemo.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/user/work/kthread2/kthreaddemo.ko /home/user/work/kthread2/kthreaddemo.o /home/user/work/kthread2/kthreaddemo.mod.o

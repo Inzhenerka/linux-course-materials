@@ -1,0 +1,1 @@
+savedcmd_/home/user/work/radio1/radio.mod := printf '%s\n'   radio_main.o radio_or.o radio_read.o radio_write.o | awk '!x[$$0]++ { print("/home/user/work/radio1/"$$0) }' > /home/user/work/radio1/radio.mod

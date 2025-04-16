@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 ee410aad92424a859e280ba4767cd18bf4bbeb87 Ваше Имя <you@example.com> 1726232126 +0300	commit (initial): First commit
+ee410aad92424a859e280ba4767cd18bf4bbeb87 44f7d0dcf8631557ff5a74aeb2f073a5b60976ca Ваше Имя <you@example.com> 1726233199 +0300	commit: Исправлены сигнатуры колбеков open, release. Заменено (правильно?) максимальное кол-во секторов

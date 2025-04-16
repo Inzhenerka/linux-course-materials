@@ -1,0 +1,1 @@
+savedcmd_/home/user/work_t/param_demo1/param_demo.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/user/work_t/param_demo1/param_demo.ko /home/user/work_t/param_demo1/param_demo.o /home/user/work_t/param_demo1/param_demo.mod.o
